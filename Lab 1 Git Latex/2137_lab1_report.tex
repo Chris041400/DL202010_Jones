@@ -109,7 +109,29 @@ This lab was to help learn the basics of GitHub and the program LaTeX to produce
 
 \section*{Code}
 
-Include all of the code you wrote or modified here.
+\includegraphics[width=1.0\textwidth, trim = .1cm .1cm .5cm .1cm,clip]{capture2.PNG}
 
+
+module example
+
+\#(parameter BITS=4)
+
+(
+
+input [BITS-1:0] in0, in1,
+
+input sel,
+
+output [BITS-1:0] out
+
+);
+
+
+
+// Choose in1 or in0
+
+out = sel ? in1: in0; 
+
+endmodule
 
 \end{document}
