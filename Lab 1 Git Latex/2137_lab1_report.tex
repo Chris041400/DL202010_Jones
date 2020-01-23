@@ -1,5 +1,5 @@
-% Digital Logic Report Template
-% Created: 2020-01-10, John Miller
+% Digital Logic Report 1
+% Created: 2020-01-19,CJ Jones
 
 %==========================================================
 %=========== Document Setup  ==============================
@@ -105,33 +105,14 @@ This lab was to help learn the basics of GitHub and the program LaTeX to produce
 
 	\center Figure 1.1: Table and simulation waveform to reproduce
 	
+	
+	
 \end{figure}
-
+    \includegraphics[width=1.0\textwidth, trim = .1cm .1cm .5cm .1cm,clip]{capture2.PNG}
+	\center Figure 2.1 Screenshot of the history tab
+	
 \section*{Code}
 
-\includegraphics[width=1.0\textwidth, trim = .1cm .1cm .5cm .1cm,clip]{capture2.PNG}
-
-
-module example
-
-\#(parameter BITS=4)
-
-(
-
-input [BITS-1:0] in0, in1,
-
-input sel,
-
-output [BITS-1:0] out
-
-);
-
-
-
-// Choose in1 or in0
-
-out = sel ? in1: in0; 
-
-endmodule
+\Verilog[caption=File-included Verilog code example,label=code:file_ex]{lab1_example_code.sv}
 
 \end{document}
