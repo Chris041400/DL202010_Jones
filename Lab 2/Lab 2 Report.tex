@@ -68,22 +68,49 @@
 
 \section*{Summary}
 
-Type the summary of your experiment and results here.  
+The purpose of this lab was to demonstrate how transistors can be used to construct logic gates on an IDL-800 board. Several gates were constructed and tested such as the OR, NOT, and NOR gates as well as an unknown gate that combined a NOR gate with two inverting gates, showing how transistors can be used to hook gates together. It was found that the unknown gate was the AND gate. Additionally, the flow of current in each gate was analyzed as documented in the written results.
 
 
 \section*{Q\&A}
 
-Answer questions posed in the lab assignment here.
+\begin{enumerate}
+	\item What logic operation does it implement?
+	
+	The logic operation in the "unknown" gate combination was found to be the AND style operation. This means the LED would only lit up when both switches were turned on(set as 1 values), as further discussed in the Results section.
+\end{enumerate}
+
 
 
 \section*{Results}
 
-In this section, put your simulation waveforms, results tables, pictures of hardware, and any other required items.
+\begin{center}
+	
+	\includegraphics[page = 1, width=1.0\textwidth]{"Circuit Demonstration"}
+	
+	\includegraphics[page = 2, width=1.0\textwidth]{"Circuit Demonstration"}
+	
+\end{center}
+
+\begin{figure}[ht]\centering
+	\begin{tabular}{cc|c}
+		\toprule
+		A & B & AND \\
+		\midrule
+		0 & 0 & 0 \\
+		0 & 1 & 0 \\
+		1 & 0 & 0 \\
+		1 & 1 & 1 \\
+		\bottomrule
+	\end{tabular} 
+	
+	\caption{ This logic table demonstrates the results of the unknown gate, allowing it to be easily identified as an AND gate.}
+\end{figure}
+
+\section*{Conclusion}
+
+While the purpose of this report was not exactly to find values, but rather to test the construction of logic gates using transistors, the skills gained will help students in the future as they try to find how to accomplish goals using logic gates. Additionally, this lab allowed students to become comfortable with lab equipment that is sure to be utilized in the future.
 
 
-\section*{Code}
-
-Include all of the code you wrote or modified here.
 
 
 \end{document}
