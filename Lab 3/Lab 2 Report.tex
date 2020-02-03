@@ -68,20 +68,27 @@
 
 \section*{Summary}
 
-The purpose of this lab was to demonstrate how transistors can be used to construct logic gates on an IDL-800 board. Several gates were constructed and tested such as the OR, NOT, and NOR gates as well as an unknown gate that combined a NOR gate with two inverting gates, showing how transistors can be used to hook gates together. It was found that the unknown gate was the AND gate. Additionally, the flow of current in each gate was analyzed as documented in the written results.
+The purpose of this experiment was to learn how to build different kinds of adders. By examining the truth tables to half, full, and two-bit adders, occasionally with their decimal equivalent, it was easier to examine what types of gate combinations were necessary for each type of adder. For example, with the half-adder, it becomes apparent that an XOR gate is necessary to get the correct value of the sum (S), while the carry (C) utilizes an AND gate to correctly add the binary digits. This also formed the basis for forming the more complicated full-adder and two-bit adder circuits. Additionally, students used schematics and wiring diagrams to aid in the construction of the adders.
 
 
 \section*{Q\&A}
 
 \begin{enumerate}
-	\item What logic operation does it implement?
+	\item Which gates could we use for combining the carry bits?
 	
-	The logic operation in the "unknown" gate combination was found to be the AND style operation. This means the LED would only lit up when both switches were turned on(set as 1 values), as further discussed in the Results section.
+	To combine the carry bits we could use the AND or XOR gate. Normally an AND gate is preferable for finding the carry bit itself from an input, but the XOR is easier for combining two carry bits into a higher carry bit. 
+	
+	\item Which one should we use and why?
+	
+	We should use the XOR gate because it combines both the carry bits but only when exclusively one is high. That way all cases of the bits only being high one at a time are accounted for, and not when they both are high. 
 \end{enumerate}
 
 
 
+
 \section*{Results}
+
+The included documents below demonstrate the construction of each of the three adders being built along with the corresponding truth table outputs they produce. 
 
 \begin{figure}
 	\includegraphics [width=1.0\textwidth]{"HALFADDER"}
@@ -89,7 +96,7 @@ The purpose of this lab was to demonstrate how transistors can be used to constr
 
 \end{figure}
 \begin{figure}[ht]\centering
-	\begin{tabular}{cc|cc|c}
+	\begin{tabular}{c|c||c|c||c}
 		\toprule
 		A & B & C & S & Decimal \\
 		\midrule
@@ -109,18 +116,22 @@ The purpose of this lab was to demonstrate how transistors can be used to constr
 \caption{Full Adder Circuit}
 \end{figure}
 \begin{figure}[ht]\centering
-	\begin{tabular}{cc|c}
+	\begin{tabular}{c|c|c||c|c||c}
 		\toprule
-		A & B & AND \\
+		$C_{m}$ & A & B & $C_{out}$ & S & Decimal \\
 		\midrule
-		0 & 0 & 0 \\
-		0 & 1 & 0 \\
-		1 & 0 & 0 \\
-		1 & 1 & 1 \\
+		0 & 0 & 0 & 0 & 0 & 0  \\
+		0 & 0 & 1 & 0 & 1 & 1  \\
+		0 & 1 & 0 & 0 & 1 & 1  \\
+		0 & 1 & 1 & 1 & 0 & 2  \\
+		1 & 0 & 0 & 0 & 1 & 1  \\
+		1 & 0 & 1 & 1 & 0 & 2  \\
+		1 & 1 & 0 & 1 & 0 & 2  \\
+		1 & 1 & 1 & 1 & 1 & 3  \\
 		\bottomrule
 	\end{tabular} 
 	
-	\caption{Logic table of the unknown circuit}
+	\caption{Full Adder Truth Table}
 	
 \end{figure}
 
@@ -131,27 +142,31 @@ The purpose of this lab was to demonstrate how transistors can be used to constr
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{cc|c}
+	\begin{tabular}{c|c|c||c}
 		\toprule
-		A & B & AND \\
+		$C_{in}$ & $A_{2}$$A_{1}$ & $B_{2}$$B_{1}$ &$C_{out}$$S_{2}$$S_{1}$  \\
 		\midrule
-		0 & 0 & 0 \\
-		0 & 1 & 0 \\
-		1 & 0 & 0 \\
-		1 & 1 & 1 \\
+		0 & 00 & 00 & 0 0 0\\
+		0 & 00 & 01 & 0 0 1\\
+		0 & 01 & 01 & 0 1 0\\
+		0 & 10 & 01 & 0 1 1\\
+		0 & 10 & 10 & 1 0 0\\
+		1 & 10 & 10 & 1 0 1\\
+		1 & 11 & 11 & 1 1 1\\
 		\bottomrule
 	\end{tabular} 
 	
-	\caption{Logic table of the unknown circuit}
+	\caption{2-Bit Adder Truth Table}
 	
 \end{figure}
 
 
-Figure 1 and 2 both show how current flows in the constructed logic gates. It also shows whether or not each switch, transistor, and LED is on or off. Figure 3 is a logic table that depicts the data of the unknown gate constructed. Using the table, the unknown circuit gate can be identified as an AND gate.
+
 \clearpage
+
 \section*{Conclusion}
 
-While the purpose of this report was not exactly to find values, but rather to test the construction of logic gates using transistors, the skills gained will help students in the future as they try to find how to accomplish goals using logic gates. Additionally, this lab allowed students to become comfortable with lab equipment that is sure to be utilized in the future.
+This lab demonstrated the ability to build circuits that have additive capabilities using binary digits. While the circuits built did not have the aesthetic appeal and color coded wires necessary for building more complex circuits, not having the exact number and types of wires hindered this ability. Therefore, given the tools in lab, functioning circuits were built, despite not being the prettiest to look at. A useful skill gained from this lab is utilizing the ordering of switches and LEDs to correspond with the truth tables in order to test the circuit with as much ease as possible. As can be noted, in the two-bit adder circuit, labels using paper were utilized to keep track of this order, again to make testing easier. Overall, this lab demonstrated how to build adder circuits. Being combining similar structures, although with varying carry-ins are sources for input and output, the AND and XOR gates were sufficient to build a half-, full-, and 2-bit adders.
 
 
 
