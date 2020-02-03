@@ -1,0 +1,122 @@
+% Digital Logic Lab Report 2
+% Created: 2020-01-27, CJ Jones and Ashley Lackey
+
+%==========================================================
+%=========== Document Setup  ==============================
+
+% Formatting defined by class file
+\documentclass[11pt]{article}
+
+% ---- Document formatting ----
+\usepackage[margin=1in]{geometry}	% Narrower margins
+\usepackage{booktabs}				% Nice formatting of tables
+\usepackage{graphicx}				% Ability to include graphics
+
+%\setlength\parindent{0pt}	% Do not indent first line of paragraphs 
+\usepackage[parfill]{parskip}		% Line space b/w paragraphs
+%	parfill option prevents last line of pgrph from being fully justified
+
+% Parskip package adds too much space around titles, fix with this
+\RequirePackage{titlesec}
+\titlespacing\section{0pt}{8pt plus 4pt minus 2pt}{3pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{4pt plus 4pt minus 2pt}{-2pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{2pt plus 4pt minus 2pt}{-6pt plus 2pt minus 2pt}
+
+% ---- Hyperlinks ----
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}	% For URL's. Automatically links internal references.
+
+% ---- Code listings ----
+\usepackage{listings} 					% Nice code layout and inclusion
+\usepackage[usenames,dvipsnames]{xcolor}	% Colors (needs to be defined before using colors)
+
+% Define custom colors for listings
+\definecolor{listinggray}{gray}{0.98}		% Listings background color
+\definecolor{rulegray}{gray}{0.7}			% Listings rule/frame color
+
+% Style for Verilog
+\lstdefinestyle{Verilog}{
+	language=Verilog,					% Verilog
+	backgroundcolor=\color{listinggray},	% light gray background
+	rulecolor=\color{blue}, 			% blue frame lines
+	frame=tb,							% lines above & below
+	linewidth=\columnwidth, 			% set line width
+	basicstyle=\small\ttfamily,	% basic font style that is used for the code	
+	breaklines=true, 					% allow breaking across columns/pages
+	tabsize=3,							% set tab size
+	commentstyle=\color{gray},	% comments in italic 
+	stringstyle=\upshape,				% strings are printed in normal font
+	showspaces=false,					% don't underscore spaces
+}
+
+% How to use: \Verilog[listing_options]{file}
+\newcommand{\Verilog}[2][]{%
+	\lstinputlisting[style=Verilog,#1]{#2}
+}
+
+
+
+
+%======================================================
+%=========== Body  ====================================
+\begin{document}
+
+\title{ELC 2137 Lab 2: Transistor}
+\author{Ashlie Lackey, CJ Jones}
+
+\maketitle
+
+
+\section*{Summary}
+
+The purpose of this lab was to demonstrate how transistors can be used to construct logic gates on an IDL-800 board. Several gates were constructed and tested such as the OR, NOT, and NOR gates as well as an unknown gate that combined a NOR gate with two inverting gates, showing how transistors can be used to hook gates together. It was found that the unknown gate was the AND gate. Additionally, the flow of current in each gate was analyzed as documented in the written results.
+
+
+\section*{Q\&A}
+
+\begin{enumerate}
+	\item What logic operation does it implement?
+	
+	The logic operation in the "unknown" gate combination was found to be the AND style operation. This means the LED would only lit up when both switches were turned on(set as 1 values), as further discussed in the Results section.
+\end{enumerate}
+
+
+
+\section*{Results}
+
+\begin{figure}
+	\includegraphics[page = 1, width=1.0\textwidth]{"Circuit Demonstration"}
+	\caption{Page 1 of the Circuit Demonstration Document}
+
+	
+\end{figure}
+
+\begin{figure}
+\includegraphics[page = 2, width=1.0\textwidth]{"Circuit Demonstration"}
+\caption{Page 2 of the Circuit Demonstration Document}
+\end{figure}
+
+\begin{figure}[ht]\centering
+	\begin{tabular}{cc|c}
+		\toprule
+		A & B & AND \\
+		\midrule
+		0 & 0 & 0 \\
+		0 & 1 & 0 \\
+		1 & 0 & 0 \\
+		1 & 1 & 1 \\
+		\bottomrule
+	\end{tabular} 
+	
+	\caption{Logic table of the unknown circuit}
+	
+\end{figure}
+Figure 1 and 2 both show how current flows in the constructed logic gates. It also shows whether or not each switch, transistor, and LED is on or off. Figure 3 is a logic table that depicts the data of the unknown gate constructed. Using the table, the unknown circuit gate can be identified as an AND gate.
+\clearpage
+\section*{Conclusion}
+
+While the purpose of this report was not exactly to find values, but rather to test the construction of logic gates using transistors, the skills gained will help students in the future as they try to find how to accomplish goals using logic gates. Additionally, this lab allowed students to become comfortable with lab equipment that is sure to be utilized in the future.
+
+
+
+
+\end{document}
