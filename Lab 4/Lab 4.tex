@@ -68,7 +68,7 @@
 
 \section*{Summary}
 
-The purpose of this experiment was to understand how adders can be manipulated into a subtractor. Using two-full adder circuits, an additional carry in bit, or "mode" bit as called in lab, delegates if the inputs are being added or subtracted. The lab also demonstrated the primary difference between subtracting with a borrow, and adding with a carry. The addition method with the two's complement of the second number would produce a value that is not what is expected of "regular" subtraction and would have to be adjusted as such. In learning how to use the mode bit, correct subtraction was able to take place using our circuit.  
+The purpose of this experiment was to understand how adders can be manipulated into a subtractor. Using two-full adder circuits, an additional carry in bit, or "mode" bit as called in lab, delegates if the inputs are being added or subtracted. The lab also demonstrated the primary difference between subtracting with a borrow, and adding with a carry. The addition method with the two's complement of the second number would produce a value that is not what is expected of "regular" subtraction and would have to be adjusted as such. In learning how to use the mode bit, correct subtraction was able to take place using our circuit. 
 
 
 \section*{Q\&A}
@@ -86,29 +86,30 @@ The purpose of this experiment was to understand how adders can be manipulated i
 	
 	\item Why  were  the  combinations  given  in  the  truthtable chosen? 
 	
-	The combinations in the truthtable were picked to show the importance of a carry bit in your calculations. Without regard for the carry bit in the initial table, the results calculted under "Expected Results" were inconsistent with those found in the "Actual Results" because the expected results used addition with a two's complement with no regard for the carry bit. This is because the circuit that was built accounts for the sign bit in the form of the "mode" being carried in to account for subtraction.
+	The combinations in the truthtable were picked to show the importance of a carry bit in your calculations. Without regard for the carry bit in the initial table, the results calculted under "Expected Results" were inconsistent with those found in the "Actual Results" because the expected results used addition with a two's complement with no regard for the carry bit. The circuit that was built accounts for the sign bit in the form of the "mode" being carried in to account for subtraction.
 	
 	\item Do the results from your adder/subtractor match what  you  would  expect  from  theory?   Explain any discrepancies.
 	
-	The results match what we would expect from theory, however, they differ from the initial "Expected Results". This is because the subtractor circuit accounts for the sign carry bit, while the addition circuit produces the two's complement of the result. In theory, the two's complement is sufficient as a result of subtraction using an "addition" method. However, since the circuit cannot interpret this, it is more effective to use the 
+	The results match what we would expect from theory, however, they differ from the initial "Expected Results". This is because the subtractor circuit accounts for the sign carry bit, while addition produces the two's complement of the result. In theory, the two's complement is sufficient as a result of subtraction using an "addition" method. However, since the circuit cannot interpret this, it is more effective to use the subtractor method to get the exact result and not the theoretical complement.
 	
 \end{enumerate}
 
 
 
 
+
 \section*{Results}
 
-The construction of the subtractor circuit is below, along with the wiring schematic and expected results table. The "Expected Results" page documents the difference between subtraction through two's complement addition and borrow subtraction, which our circuit demonstrates through the actual results portion of the experiment.
+The construction of the subtractor circuit is below, along with the wiring schematic and expected results table. The "Expected Results" page documents the difference between subtraction through two's complement addition and borrow subtraction, which our results demonstrates through the "Actual Results" portion of the experiment.
 \clearpage
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{"Circuit Picture"}
-	\caption{Two-Bit Adder Circuit}
+	\caption{Picture of the Circuit Constructed.}
 \end{figure}
 
 
 \section*{Conclusion}
-The results of this experiment revealed the necessity of carry bits when trying to build a subtractor circuit. If you chose to use addition with the two's complement method, you would find yourself getting the wrong answer as a result of the signed result. To combat this, the most significant bit was flipped so that the right answer was obtained as demonstrated in the Expected Results table. The takeaway from this lab was then the demonstration that we can manipulate tools we already have to fix other issues we are trying to solve. In this case, by combining two full adders and adding a mode bit to combat issues with signs, we can manipulate addition to work also with subtracting numbers.
+The results of this experiment revealed the necessity of carry bits when trying to build a subtractor circuit. If you chose to use addition with the two's complement method, you would find yourself getting the wrong answer as a result of the signed result. To combat this, the most significant bit was flipped so that the correct answer was obtained as demonstrated in the Expected Results table under "Actual Results". The takeaway from this lab was the demonstration that we can manipulate tools we already have to fix other issues we are trying to solve. In this case, by combining two full adders and adding a mode bit to combat issues with signs and correct output value, we manipulated addition to work also with subtracting numbers.
 
 
 
