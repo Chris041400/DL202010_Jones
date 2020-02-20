@@ -68,7 +68,7 @@
 
 \section*{Summary}
 
-Here is where my summary will go lalala
+The purpose of this lab was to learn how to use the hardware description language Verilog to test digital circuits through designing and making testbenches. By coding a half-, full-, and 2-bit adder and testing them, skills in organizing files, learning syntax, and understanding gate-level code were obtained. This provides students with a basis for coding in Verilog, which will later be utilized for working with the FPGA Basys3 boards.
 
 
 \section*{Q\&A}
@@ -76,7 +76,7 @@ Here is where my summary will go lalala
 \begin{enumerate}
 	\item What is one thing that you still don’t understand about Verilog?
 	
-	The most confusing this about Verilog is...
+	We are still confused as how to properly run testbenches, and how to look for errors when the results don't look like how they are expected to.
 \end{enumerate}
 
 
@@ -84,7 +84,13 @@ Here is where my summary will go lalala
 
 \section*{Results}
 
-The results will be discussed here with an inclusion of the screenshots...
+Below are the results for running the half-, full-, and 2-bit adders. The design and testbench code for each adder is included along with each expected results table and the block diagram of each digital circuit. As the ERT's and screenshots each indicate, the results from the testbench simulations do match what is expected.
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{"HalfAdderDia"}
+	\caption{Block Diargram of the Half Adder}
+\end{figure}
+\clearpage
+
 \begin{figure}[ht]\centering
 	\begin{tabular}{l|rrrr}
 		Time (ns): & 0 & 10 & 20 & 30 \\
@@ -100,6 +106,12 @@ The results will be discussed here with an inclusion of the screenshots...
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{"HalfAdder"}
 	\caption{Sin Wave of the Half Adder}
+\end{figure}
+\clearpage
+
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{"FullAdderDia"}
+	\caption{Block Diagram of Full Adder}
 \end{figure}
 \clearpage
 
@@ -123,23 +135,33 @@ The results will be discussed here with an inclusion of the screenshots...
 \end{figure}
 \clearpage
 
+\begin{figure}
+	\includegraphics[width=1.0\textwidth]{"2BitAdderDia"}
+	\caption{Block Diagram of 2 Bit Adder}
+\end{figure}
+\clearpage
+
+
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrrrrrr}
-		Time (ns): & 0 & 10 & 20 & 30 & 40 & 50 & 60 & 70 \\
-		\midrule 
-		a &  0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \\
-		b & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 1\\
-		cin & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 \\
-		\midrule
-		c & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 1 \\
-		s & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 1 \\ \bottomrule
-	\end{tabular}\medskip
+		\begin{tabular}{l|rrrrrrrrrrrrrr}
+			Time (ns): & 0 & 10 & 20 & 30 & 40 & 50 & 60 & 70 & 80 & 90 & 100 & 110 & 120 & 130 \\
+			\midrule 
+			mode & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+			a & 00 & 00 & 00 & 00 & 01 & 10 & 10 & 00 & 00 & 00 & 00 & 01 & 10 & 10 \\
+			b & 00 & 01 & 10 & 11 & 01 & 01 & 00 & 00 & 01 & 10 & 11 & 01 & 01 & 00\\
+			\midrule
+			c & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+			s & 00 & 11 & 10 & 01 & 00 & 01 & 10 & 00 & 01 & 10 & 11 & 10 & 11 & 10 \\
+			deci & 0 & -1 & -2 & -3 & 0 & 1 & 2 & 0 & 1 & 2 & 3 & 2 & 3 & 2 \\
+			\bottomrule
+		\end{tabular}\medskip
+		
 	
 
 \end{figure}
 \begin{figure}
 	\includegraphics[width=1.0\textwidth]{"AddSubReal"}
-	\caption{Sin Wave of the Addition Subtraction }
+	\caption{Sin Wave of the 2-Bit }
 \end{figure}
 \clearpage
 
