@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  20 FEB 2020 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  20 FEB 2020 12:28
 entering extended mode
 **"./Lab 5.tex"
 ("Lab 5.tex"
@@ -329,6 +329,12 @@ def"
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 )) ("Lab 5.aux"
 
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
 LaTeX Warning: Label `code:ex' multiply defined.
 
 
@@ -471,41 +477,42 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <HalfAdder.jpg, id=25, 736.25063pt x 541.27219pt>
 File: HalfAdder.jpg Graphic file (type jpg)
 <use HalfAdder.jpg>
-Package pdftex.def Info: HalfAdder.jpg  used on input line 107.
+Package pdftex.def Info: HalfAdder.jpg  used on input line 106.
 (pdftex.def)             Requested size: 469.75502pt x 345.3641pt.
  [3
 
-] [4 <./HalfAdder.jpg>]
-<FullAdderDia.pdf, id=35, 614.295pt x 794.97pt>
+ <./HalfAdder.jpg>]
+<FullAdderDia.pdf, id=31, 614.295pt x 794.97pt>
 File: FullAdderDia.pdf Graphic file (type pdf)
 <use FullAdderDia.pdf>
-Package pdftex.def Info: FullAdderDia.pdf  used on input line 113.
+Package pdftex.def Info: FullAdderDia.pdf  used on input line 115.
 (pdftex.def)             Requested size: 469.75502pt x 607.9196pt.
- [5 <./FullAdderDia.pdf>]
-<FullAdder.png, id=47, 731.73375pt x 541.27219pt>
+ [4 <./FullAdderDia.pdf>]
+<FullAdder.png, id=43, 731.73375pt x 541.27219pt>
 File: FullAdder.png Graphic file (type png)
 <use FullAdder.png>
-Package pdftex.def Info: FullAdder.png  used on input line 133.
+Package pdftex.def Info: FullAdder.png  used on input line 132.
 (pdftex.def)             Requested size: 469.75502pt x 347.4867pt.
- [6
+ [5
 
 
-] [7 <./FullAdder.png>]
-<2BitAdderDia.pdf, id=60, 614.295pt x 794.97pt>
+ <./FullAdder.png>]
+<2BitAdderDia.pdf, id=51, 614.295pt x 794.97pt>
 File: 2BitAdderDia.pdf Graphic file (type pdf)
 <use 2BitAdderDia.pdf>
-Package pdftex.def Info: 2BitAdderDia.pdf  used on input line 139.
+Package pdftex.def Info: 2BitAdderDia.pdf  used on input line 140.
 (pdftex.def)             Requested size: 469.75502pt x 607.9196pt.
- [8 <./2BitAdderDia.pdf>]
-<AddSubReal.png, id=72, 758.835pt x 515.67656pt>
+ [6 <./2BitAdderDia.pdf>]
+<AddSubReal.png, id=63, 758.835pt x 515.67656pt>
 File: AddSubReal.png Graphic file (type png)
 <use AddSubReal.png>
-Package pdftex.def Info: AddSubReal.png  used on input line 163.
+Package pdftex.def Info: AddSubReal.png  used on input line 159.
 (pdftex.def)             Requested size: 469.75502pt x 319.23618pt.
- [9
+
+[7
 
 
-] [10 <./AddSubReal.png>]
+ <./AddSubReal.png>]
 ("C:\Users\Owner\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
 sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -519,18 +526,18 @@ sty"
 File: lstlang3.sty 2019/09/10 1.8c listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 170.
+nput line 168.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 172.
- [11
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 170.
+ [8
 
-] [12] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 338.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 338.
+] [9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 336.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 336.
  ("Lab 5.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 338.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 338.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
 Package rerunfilecheck Info: File `"Lab 5".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -539,10 +546,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8849 strings out of 492484
- 129006 string characters out of 3121601
- 563872 words of memory out of 3000000
- 12900 multiletter control sequences out of 15000+200000
+ 8844 strings out of 492484
+ 128971 string characters out of 3121601
+ 563936 words of memory out of 3000000
+ 12901 multiletter control sequences out of 15000+200000
  8364 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,8n,49p,1198b,1902s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -552,9 +559,9 @@ blic/amsfonts/cm/cmr10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Owner/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Owner/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Lab 5.pdf" (14 pages, 793892 bytes).
+Output written on "Lab 5.pdf" (11 pages, 791978 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
+ 288 PDF objects out of 1000 (max. 8388607)
+ 167 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
