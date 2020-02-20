@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  20 FEB 2020 12:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  20 FEB 2020 12:45
 entering extended mode
 **"./Lab 5.tex"
 ("Lab 5.tex"
@@ -488,15 +488,15 @@ File: FullAdderDia.pdf Graphic file (type pdf)
 Package pdftex.def Info: FullAdderDia.pdf  used on input line 115.
 (pdftex.def)             Requested size: 469.75502pt x 607.9196pt.
  [4 <./FullAdderDia.pdf>]
-<FullAdder.png, id=43, 731.73375pt x 541.27219pt>
-File: FullAdder.png Graphic file (type png)
-<use FullAdder.png>
-Package pdftex.def Info: FullAdder.png  used on input line 132.
-(pdftex.def)             Requested size: 469.75502pt x 347.4867pt.
+<FullAdderWaveReal.png, id=43, 744.53156pt x 566.86781pt>
+File: FullAdderWaveReal.png Graphic file (type png)
+<use FullAdderWaveReal.png>
+Package pdftex.def Info: FullAdderWaveReal.png  used on input line 132.
+(pdftex.def)             Requested size: 469.75502pt x 357.67354pt.
  [5
 
 
- <./FullAdder.png>]
+ <./FullAdderWaveReal.png>]
 <2BitAdderDia.pdf, id=51, 614.295pt x 794.97pt>
 File: 2BitAdderDia.pdf Graphic file (type pdf)
 <use 2BitAdderDia.pdf>
@@ -508,8 +508,7 @@ File: AddSubReal.png Graphic file (type png)
 <use AddSubReal.png>
 Package pdftex.def Info: AddSubReal.png  used on input line 159.
 (pdftex.def)             Requested size: 469.75502pt x 319.23618pt.
-
-[7
+ [7
 
 
  <./AddSubReal.png>]
@@ -547,7 +546,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  8844 strings out of 492484
- 128971 string characters out of 3121601
+ 129027 string characters out of 3121601
  563936 words of memory out of 3000000
  12901 multiletter control sequences out of 15000+200000
  8364 words of font info for 30 fonts, out of 3000000 for 9000
@@ -559,7 +558,7 @@ blic/amsfonts/cm/cmr10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Owner/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Owner/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Lab 5.pdf" (11 pages, 791978 bytes).
+Output written on "Lab 5.pdf" (11 pages, 794325 bytes).
 PDF statistics:
  288 PDF objects out of 1000 (max. 8388607)
  167 named destinations out of 1000 (max. 500000)
