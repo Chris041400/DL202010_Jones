@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  27 FEB 2020 13:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  27 FEB 2020 13:07
 entering extended mode
 **"./Lab 6.tex"
 ("Lab 6.tex"
@@ -499,22 +499,22 @@ File: toplevelmodfixed.png Graphic file (type png)
 <use toplevelmodfixed.png>
 Package pdftex.def Info: toplevelmodfixed.png  used on input line 176.
 (pdftex.def)             Requested size: 469.75502pt x 81.69965pt.
-<c.jpg, id=30, 3557.29pt x 2216.28pt>
-File: c.jpg Graphic file (type jpg)
-<use c.jpg>
-Package pdftex.def Info: c.jpg  used on input line 184.
-(pdftex.def)             Requested size: 469.75502pt x 292.65808pt.
-[3
-
- <./toplevelmodfixed.png>] [4 <./c.jpg>]
-<f.jpg, id=42, 2904.8525pt x 1840.8775pt>
+<f.jpg, id=30, 2904.8525pt x 1840.8775pt>
 File: f.jpg Graphic file (type jpg)
 <use f.jpg>
-Package pdftex.def Info: f.jpg  used on input line 192.
+Package pdftex.def Info: f.jpg  used on input line 184.
 (pdftex.def)             Requested size: 469.75502pt x 297.69244pt.
+[3
+
+ <./toplevelmodfixed.png>] [4 <./f.jpg>]
+<c.jpg, id=42, 3557.29pt x 2216.28pt>
+File: c.jpg Graphic file (type jpg)
+<use c.jpg>
+Package pdftex.def Info: c.jpg  used on input line 192.
+(pdftex.def)             Requested size: 469.75502pt x 292.65808pt.
  [5
 
- <./f.jpg>]
+ <./c.jpg>]
 ("C:\Users\Owner\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
 sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -561,7 +561,7 @@ blic/amsfonts/cm/cmr10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Owner/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Owner/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Lab 6.pdf" (12 pages, 3832055 bytes).
+Output written on "Lab 6.pdf" (12 pages, 3832056 bytes).
 PDF statistics:
  501 PDF objects out of 1000 (max. 8388607)
  356 named destinations out of 1000 (max. 500000)
