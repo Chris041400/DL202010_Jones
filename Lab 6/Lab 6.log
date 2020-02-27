@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  27 FEB 2020 13:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  27 FEB 2020 13:09
 entering extended mode
 **"./Lab 6.tex"
 ("Lab 6.tex"
@@ -550,7 +550,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  9044 strings out of 492484
  131475 string characters out of 3121601
- 486755 words of memory out of 3000000
+ 486770 words of memory out of 3000000
  12913 multiletter control sequences out of 15000+200000
  8364 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -561,7 +561,7 @@ blic/amsfonts/cm/cmr10.pfb><C:/Users/Owner/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Owner/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Owner/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Lab 6.pdf" (12 pages, 3832056 bytes).
+Output written on "Lab 6.pdf" (12 pages, 3832361 bytes).
 PDF statistics:
  501 PDF objects out of 1000 (max. 8388607)
  356 named destinations out of 1000 (max. 500000)
