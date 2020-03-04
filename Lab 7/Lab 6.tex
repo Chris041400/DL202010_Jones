@@ -137,11 +137,27 @@ This lab explored using a Basys3 board to produce an 8-bit number on a 7-segment
 		out & 0000 & 0010 &0010 &0001 
 	\end{tabular}\medskip
 	
-	\includegraphics[width=1.0\textwidth]{Part 1}
-	\caption{MUX2-4B simulation waveform and ERT}
+	\includegraphics[width=1.0\textwidth]{Part1.PNG}
+	\caption{Add 3 simulation waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
+\begin{figure}[ht]\centering
+	\begin{tabular}{l|rrrr}
+		Time (ns): & 0 & 10 & 20 & 30 \\
+		\midrule 
+		in 0 & 0000 & 0001 & 0010 & 0010 \\
+		in 1 & 0001 & 0010 & 0001 & 0001 \\
+		sel & 0 & 1 & 0 & 1 \\
+		\bottomrule
+		out & 0000 & 0010 &0010 &0001 
+	\end{tabular}\medskip
+	
+	\includegraphics[width=1.0\textwidth]{Part2.PNG}
+	\caption{BCD simulation waveform and ERT}
+	\label{fig:sim_with_table}
+\end{figure}
+\clearpage
 
 
 
