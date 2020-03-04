@@ -108,7 +108,7 @@ This lab explored using a Basys3 board to produce an 8-bit number on a 7-segment
 
 \section*{Results}
 
-
+Below are the Verilog source files (one for the MUX, 7-segment decoder, and the top-level module, along with their testbenches). Along with this are expected results tables for every testbench, and pictures of the Basys3 board displaying values on the two-different displays. Finally, a list of errors we encountered during our testbench modules include:
 
 \begin{enumerate}
 	
@@ -126,21 +126,7 @@ This lab explored using a Basys3 board to produce an 8-bit number on a 7-segment
 	
 \end{enumerate} 
 
-\begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrr}
-		Time (ns): & 0 & 10 & 20 & 30 \\
-		\midrule 
-		in 0 & 0000 & 0001 & 0010 & 0010 \\
-		in 1 & 0001 & 0010 & 0001 & 0001 \\
-		sel & 0 & 1 & 0 & 1 \\
-		\bottomrule
-		out & 0000 & 0010 &0010 &0001 
-	\end{tabular}\medskip
-	
-	\includegraphics[width=1.0\textwidth]{Part 1}
-	\caption{MUX2-4B simulation waveform and ERT}
-	\label{fig:sim_with_table}
-\end{figure}
+This tells us that simulations are useful because it saves time and resources when we may be formatting our circuits incorrectly. Rather than waste resources and build a circuit incorrectly, we can test to see if our connection and test values are accurate. This proves to be very useful in troubleshooting and quickly changing values/connections, when this would be much harder to do on a physical circuit.
 
 
 
