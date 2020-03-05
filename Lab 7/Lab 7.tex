@@ -176,32 +176,32 @@ endmodule //Add3
 
 module add3_test () ;
 
-	  reg [3:0] num;
+ reg [3:0] num;
 	  
-	  wire [3:0] out;
+ wire [3:0] out;
 	  
-	  integer i ; // Declare loop variable
-	  
-	  
-	  Add3 C1 (.Cin(num), .Cout(out));
+ integer i ; // Declare loop variable
 	  
 	  
+ Add3 C1 (.Cin(num), .Cout(out));
 	  
-	  initial begin
 	  
-	  for ( i =0; i <=8'hF ; i = i +1) begin
 	  
-	  num = i;
+ initial begin
 	  
-	  #10;
+ for ( i =0; i <=8'hF ; i = i +1) begin
 	  
-	  end
+ num = i;
 	  
-	  $finish ;
+ #10;
 	  
-	  end
+ end
 	  
-	  endmodule // sseg_decoder_test
+ $finish ;
+	  
+ end
+	  
+ endmodule // sseg_decoder_test
 	  
 
 
