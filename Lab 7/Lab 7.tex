@@ -116,6 +116,23 @@ This lab explored using a Basys3 board to produce an 8-bit number on a 7-segment
 \end{figure}
 
 \begin{figure}[ht]\centering
+	\begin{tabular}{l|rrrr}
+		Time (ns): & 0 & 10 & 20 & 30 \\
+		\midrule 
+		in 0 & 0000 & 0001 & 0010 & 0010 \\
+		in 1 & 0001 & 0010 & 0001 & 0001 \\
+		sel & 0 & 1 & 0 & 1 \\
+		\bottomrule
+		out & 0000 & 0010 &0010 &0001 
+	\end{tabular}\medskip
+	
+	\includegraphics[width=1.0\textwidth]{Part2}
+	\caption{BCD6 simulation waveform and ERT}
+	\label{fig:sim_with_table}
+\end{figure}
+
+
+\begin{figure}[ht]\centering
 	
 	\includegraphics[width=1.0\textwidth]{Circuit Diagram}
 	\caption{Circuit Diagram}
@@ -215,6 +232,34 @@ endmodule
 
 \begin{lstlisting}[style=Verilog,caption=BCD6 Test Bench Code,label=code:ex ]
 
+module BCD6_Test () ;
+
+reg [5:0] num;
+
+wire [5:0] out;
+
+integer i ; // Declare loop variable
+
+
+BCD6 BCD (.B(num), .Out(out));
+
+
+
+initial begin
+
+for ( i =0; i <=6'h111111 ; i = i +1) begin
+
+num = i;
+
+#10;
+
+end
+
+$finish ;
+
+end
+
+endmodule // sseg_decoder_test
 
 
 \end{lstlisting}
@@ -246,6 +291,34 @@ endmodule
 
 \begin{lstlisting}[style=Verilog,caption=BCD11 Test Bench Code,label=code:ex ]
 
+module BCD11_Test () ;
+
+reg [8:0] num;
+
+wire [10:0] out;
+
+integer i ; // Declare loop variable
+
+
+BCD11 BCD (.in11(num), .out11(out));
+
+
+
+initial begin
+
+for ( i =0; i <=9'h111111111 ; i = i +1) begin
+
+num = i;
+
+#10;
+
+end
+
+$finish ;
+
+end
+
+endmodule // sseg_decoder_test
 
 
 
