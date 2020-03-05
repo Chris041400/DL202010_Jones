@@ -80,18 +80,27 @@ This lab explored using a Basys3 board to produce an 8-bit number on a 7-segment
 \section*{Results}
 
 
+\begin{figure}[ht]\centering
+	\includegraphics[width=1.0\textwidth]{9}
+	\caption{Picture of board}
+	\label{fig:sim_with_table}
+\end{figure}
 
+\begin{figure}[ht]\centering
+	\includegraphics[width=1.0\textwidth]{8}
+	\caption{Picture of Board}
+	\label{fig:sim_with_table}
+\end{figure}
 
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrr}
-		Time (ns): & 0 & 10 & 20 & 30 \\
+	\begin{tabular}{l|rrrrrrrrrrrrrrr}
+		Time (ns): & 0 & 10 & 20 & 30 & 40 & 50 & 60 & 70 & 80 & 90 & 100 & 110 & 120 & 130 & 140 \\
 		\midrule 
-		in 0 & 0000 & 0001 & 0010 & 0010 \\
-		in 1 & 0001 & 0010 & 0001 & 0001 \\
-		sel & 0 & 1 & 0 & 1 \\
-		\bottomrule
-		out & 0000 & 0010 &0010 &0001 
+		B & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & a & b & c & d & e \\
+		O & 0 & 1 & 2 & 3 & 4 & 8 & 9 & a & b & c & d & e & f & 0 & 1\\
+		
+		 
 	\end{tabular}\medskip
 	
 	\includegraphics[width=1.0\textwidth]{Add3WaveForm}
@@ -100,14 +109,11 @@ This lab explored using a Basys3 board to produce an 8-bit number on a 7-segment
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrr}
-		Time (ns): & 0 & 10 & 20 & 30 \\
+	\begin{tabular}{l|rrrrrr}
+		Time (ns): & 0 & 10 & 20 & 610 & 620 & 630 \\
 		\midrule 
-		in 0 & 0000 & 0001 & 0010 & 0010 \\
-		in 1 & 0001 & 0010 & 0001 & 0001 \\
-		sel & 0 & 1 & 0 & 1 \\
-		\bottomrule
-		out & 0000 & 0010 &0010 &0001 
+		Input & 0 & 1 & 2 & 3c & 3d & 3e \\
+		Output & 0 & 1 & 2 & 60 & 61 & 62 \\
 	\end{tabular}\medskip
 	
 	\includegraphics[width=1.0\textwidth]{Part2}
@@ -116,18 +122,16 @@ This lab explored using a Basys3 board to produce an 8-bit number on a 7-segment
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrr}
-		Time (ns): & 0 & 10 & 20 & 30 \\
+	\begin{tabular}{l|rrrrrr}
+		Time (ns): & 0 & 10 & 20 & 970 & 980 & 990 \\
 		\midrule 
-		in 0 & 0000 & 0001 & 0010 & 0010 \\
-		in 1 & 0001 & 0010 & 0001 & 0001 \\
-		sel & 0 & 1 & 0 & 1 \\
-		\bottomrule
-		out & 0000 & 0010 &0010 &0001 
+		Input & 0 & 1 & 2 & 61 & 62 & 63 \\
+		Output & 0 & 1 & 2 & 897 & 898 & 899 \\
 	\end{tabular}\medskip
 	
-	\includegraphics[width=1.0\textwidth]{Part2}
-	\caption{BCD6 simulation waveform and ERT}
+	\includegraphics[width=1.0\textwidth]{11BitFirst}
+	\includegraphics[width=1.0\textwidth]{11BitSecond}
+	\caption{BCD11 simulation waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
