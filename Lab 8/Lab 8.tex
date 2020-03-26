@@ -60,7 +60,7 @@
 %=========== Body  ====================================
 \begin{document}
 
-\title{ELC 2137 Lab 8: Binary Coded Decimal}
+\title{ELC 2137 Lab 8: Four Digit Display}
 \author{CJ Jones, Jake Simmons}
 
 \maketitle
@@ -85,291 +85,285 @@ This lab exlpored using a Basys3 board to produce a 4-digit display with the abi
 \section*{Results}
 
 
-\begin{figure}[ht]\centering
-	\includegraphics[width=1.0\textwidth]{9}
-	\caption{Picture of board}
-	\label{fig:sim_with_table}
-\end{figure}
-
-\begin{figure}[ht]\centering
-	\includegraphics[width=1.0\textwidth]{8}
-	\caption{Picture of Board}
-	\label{fig:sim_with_table}
-\end{figure}
 
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrrrrrrrrrrrrr}
-		Time (ns): & 0 & 10 & 20 & 30 & 40 & 50 & 60 & 70 & 80 & 90 & 100 & 110 & 120 & 130 & 140 \\
+	\begin{tabular}{l|rrrr}
+		Time (ns): & 0 & 10 & 20 & 30 \\
 		\midrule 
-		B & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & a & b & c & d & e \\
-		O & 0 & 1 & 2 & 3 & 4 & 8 & 9 & a & b & c & d & e & f & 0 & 1\\
-		
-		 
+		in 0 & 0001 & 0002 & 0004 & 0006 \\
+		in 1 & 0000 & 0003 & 0005 & 0007 \\
+		sel & 0 & 0 & 1 & 1 \\
+		\bottomrule
+		out & 0001 & 0002 &0005 &0007
 	\end{tabular}\medskip
 	
-	\includegraphics[width=1.0\textwidth]{Add3WaveForm}
-	\caption{Add3 simulation waveform and ERT}
+	\includegraphics[width=1.0\textwidth]{Mux2_Test}
+	\caption{Mux2 simulation waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrrrr}
-		Time (ns): & 0 & 10 & 20 & 610 & 620 & 630 \\
+	\begin{tabular}{l|rrrr}
+		Time (ns): & 0 & 10 & 20 & 30  \\
 		\midrule 
-		Input & 0 & 1 & 2 & 3c & 3d & 3e \\
-		Output & 0 & 1 & 2 & 60 & 61 & 62 \\
+		In0 & 0 & 4 & 8 & c \\
+		In1 & 1 & 5 & 9 & d  \\
+		In2 & 2 & 6 & a & e  \\
+		In3 & 3 & 7 & b & f  \\
+		sel & 0 & 1 & z & 3  \\
+		\bottomrule
+		Out & 0 & 5 & a & f  \\
 	\end{tabular}\medskip
 	
-	\includegraphics[width=1.0\textwidth]{Part2}
-	\caption{BCD6 simulation waveform and ERT}
+	\includegraphics[width=1.0\textwidth]{Mux4_Test}
+	\caption{Mux4 simulation waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
 
 \begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrrrr}
-		Time (ns): & 0 & 10 & 20 & 970 & 980 & 990 \\
+	\begin{tabular}{l|rrrr}
+		Time (ns): & 0 & 10 & 20 & 30 \\
 		\midrule 
-		Input & 0 & 1 & 2 & 61 & 62 & 63 \\
-		Output & 0 & 1 & 2 & 897 & 898 & 899 \\
+		In & 0 & 1 & 2 & 3  \\
+		\bottomrule
+		Out & e & d & b & 7 \\
 	\end{tabular}\medskip
 	
-	\includegraphics[width=1.0\textwidth]{11BitFirst}
-	\includegraphics[width=1.0\textwidth]{11BitSecond}
-	\caption{BCD11 simulation waveform and ERT}
+	\includegraphics[width=1.0\textwidth]{annode_decoder_test}
+	\caption{Annode decoder simulation waveform and ERT}
 	\label{fig:sim_with_table}
 \end{figure}
-
 
 \begin{figure}[ht]\centering
 	
-	\includegraphics[width=1.0\textwidth]{Circuit Diagram}
-	\caption{Circuit Diagram}
+	\includegraphics[width=1.0\textwidth]{TCL_Console}
+	\caption{TCL Console output }
 	\label{fig:sim_with_table}
 \end{figure}
+
+
 \clearpage
 
 
 \section*{Code}
 
-\begin{lstlisting}[style=Verilog,caption=Add3 Module Code,label=code:ex ]
+\begin{lstlisting}[style=Verilog,caption=Mux 2 source files ,label=code:ex ]
 
 // Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
 
-module add3(
-input  [3:0] Cin,
-output reg [3:0] Cout);
+module mux2 #(parameter N=2)(
+input [N-1:0] in0, in1,
+input sel,
+output reg [15:0] out
+);
 
 always @*
-begin
-if (Cin > 4'd4)
-Cout = Cin + 4'd3;
-else
-Cout = Cin;
-end
-
-endmodule //Add3
-
-
-\end{lstlisting}
-
-
-
-\begin{lstlisting}[style=Verilog,caption=Add3 Testbench Code,label=code:ex ]
-
-// Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
-
-module add3_test () ;
-
- reg [3:0] num;
-	  
- wire [3:0] out;
-	  
- integer i ; // Declare loop variable
-	  
-	  
- Add3 C1 (.Cin(num), .Cout(out));
-	  
-	  
-	  
- initial begin
-	  
- for ( i =0; i <=8'hF ; i = i +1) begin
-	  
- num = i;
-	  
- #10;
-	  
- end
-	  
- $finish ;
-	  
- end
-	  
- endmodule // sseg_decoder_test
-	  
-
-
-
-\end{lstlisting}
-
-
-
-\begin{lstlisting}[style=Verilog,caption=BCD6 Module Code,label=code:ex ]
-
-// Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
-module BCD6(
-input [6:0] B,
-output [6:0] Out
-);
-wire W1, W2, W3;
-wire W4, W5, W6;
-
-Add3 C1(.Cin(B[6:3]), .Cout({ Out[6],W3 , W2, W1}));
-
-Add3 C2(.Cin({W3,W2,W1,B[2]}), .Cout({Out[5],W4,W5,W6}));       
-
-Add3 C3(.Cin({W4,W5,W6,B[1]}), .Cout({Out[4], Out[3], Out[2], Out[1]}));
-
-assign Out[0] = B[0];
-
+case(sel)
+0: out = in0 ;
+default: out = in1 ;
+endcase
 endmodule
 
+
+
 \end{lstlisting}
 
+\begin{lstlisting}[style=Verilog,caption=Mux 2 Test Bench files ,label=code:ex ]
 
-
-\begin{lstlisting}[style=Verilog,caption=BCD6 Test Bench Code,label=code:ex ]
 // Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
 
-module BCD6_Test () ;
+module mux2_Test( );
 
-reg [5:0] num;
+reg [15:0] In0, In1;
 
-wire [5:0] out;
+reg sel;
 
-integer i ; // Declare loop variable
+wire [15:0] Out;
 
+mux2 #(.N(16))  m1(
 
-BCD6 BCD (.B(num), .Out(out));
+.in0(In0), .in1(In1),
+
+.out(Out), .sel(sel)
+
+);
 
 
 
 initial begin
 
-for ( i =0; i <=6'h111111 ; i = i +1) begin
+In0 = 16'b0000000000000000; In1 = 16'b0000000000000001; sel = 1'd0; #10;
 
-num = i;
+In0 = 16'b0000000000000010; In1 = 16'b0000000000000011; sel = 1'd0; #10;
 
-#10;
+In0 = 16'b0000000000000100; In1 = 16'b0000000000000101; sel = 1'd1; #10;
+
+In0 = 16'b0000000000000110; In1 = 16'b0000000000000111; sel = 1'd1; #10;
+
+
+
+$finish;
 
 end
 
-$finish ;
-
-end
-
-endmodule // sseg_decoder_test
-
-
-\end{lstlisting}
-
-
-
-\begin{lstlisting}[style=Verilog,caption=BCD11 Module Code,label=code:ex ]
-// Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
-
-module BCD11(
-input [11:0] in11,
-output [15:0] out11
-);
-
-wire [6:0] W1;
-wire W2, W3, W4;
-BCD6 C1( .B({0, in11[8:3]}), .Out(W1)
-);
-
-BCD6 C2( .B({W1[3:0], in11[2:0]}), .Out({W2, W3, W4,out11[3:0]})
-);
-
-BCD6 C3( .B({0,W1[6:4], W2, W3, W4}), .Out(out11[10:4])
-);
-assign out11[15:11] = 0;
 endmodule
 
 
+
+
 \end{lstlisting}
 
-\begin{lstlisting}[style=Verilog,caption=BCD11 Test Bench Code,label=code:ex ]
+
+
+\begin{lstlisting}[style=Verilog,caption= Mux 4 source files,label=code:ex ]
+
 // Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
 
-module BCD11_Test () ;
+module mux4 #(parameter N =4)(
+input [N-1:0] in0, in1, in2, in3,
+input [1:0] sel,
+output reg [3:0] out
+);
 
-reg [8:0] num;
+always @*
+case(sel)
+0: out = in0;
+1: out = in1;
+2: out = in2;
+default: out = in3;
+endcase 
+	  
 
-wire [10:0] out;
-
-integer i ; // Declare loop variable
 
 
-BCD11 BCD (.in11(num), .out11(out));
+\end{lstlisting}
 
+\begin{lstlisting}[style=Verilog,caption= Mux 4 Test Bench Code,label=code:ex ]
 
+// Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
+
+module mux4_Test();
+reg [3:0] in0, in1, in2, in3;
+reg [1:0] sel; 
+wire [3:0] out;
+
+mux4 m4(
+.in0(in0), .in1(in1), .in2(in2), .in3(in3), .sel(sel), .out(out)
+);
 
 initial begin
+in0 = 4'b0000; in1 = 4'b0001; in2 = 4'b0010; in3 = 4'b0011; sel = 2'b00; #10;
+in0 = 4'b0100; in1 = 4'b0101; in2 = 4'b0110; in3 = 4'b0111; sel = 2'b01; #10;
+in0 = 4'b1000; in1 = 4'b1001; in2 = 4'b1010; in3 = 4'b1011; sel = 2'b10; #10;
+in0 = 4'b1100; in1 = 4'b1101; in2 = 4'b1110; in3 = 4'b1111; sel = 2'b11; #10;
 
-for ( i =0; i <=9'h111111111 ; i = i +1) begin
-
-num = i;
-
-#10;
-
+$finish;
 end
-
-$finish ;
-
-end
-
-endmodule // sseg_decoder_test
+endmodule
 
 
 
 \end{lstlisting}
 
-\begin{lstlisting}[style=Verilog,caption=sseg1 module Code,label=code:ex ]
+\begin{lstlisting}[style=Verilog,caption= Annode Decoder Source Files,label=code:ex ]
+
 // Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
 
-module sseg1(
-input [15:0] sw,
-output [3:0] an,
+module annode_decoder(
+input [1:0] in,
+output reg [3:0] out
+);
+
+always @*
+case(in)
+0: out = 4'b1110;
+1: out = 4'b1101;
+2: out = 4'b1011;
+default: out = 4'b0111;
+endcase
+endmodule
+
+\end{lstlisting}
+
+\begin{lstlisting}[style=Verilog,caption= Annode Decoder Test Bench Code,label=code:ex ]
+
+// Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
+
+module annode_decoder_test();
+reg [1:0] in;
+wire [3:0] out;
+
+annode_decoder ant(
+
+.in(in), .out(out)
+);
+
+initial begin
+in = 2'b00; #10;
+in = 2'b01;  #10;
+in = 2'b10;  #10;
+in = 2'b11;  #10;
+
+$finish;
+end
+endmodule
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[style=Verilog,caption= Sseg4 Source File,label=code:ex ]
+// Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
+
+module sseg4(
+input [15:0] data,
+input hex_dec,
+input sign,
+input [1:0] digit_sel,
 output [6:0] seg,
-output dp
+output dp,
+output [3:0] an
 );
-
-wire [3:0] muxwire;
-wire [7:0] W1; 
-
-BCD11 BD11(
-.in11(sw[10:0]), .out11(W1));
-
-mux2_4b m1(
-.in1(W1[7:4]), .in0(W1[3:0]),
-.sel(sw[15]), .out(muxwire[3:0])
-);
-
-sseg_decoder sseg1(
-.sseg(seg), .num(muxwire[3:0])
-);
-
-assign an[3:2] = 3;
+wire [15:0] W1 ;
+wire [15:0] W2 ;
+wire [3:0] W3;
+wire [6:0] W4;
+wire [3:0] W5;
+wire W6;
+BCD11_2 B1( .in11(data[10:0]), .out11(W1));
+mux2 #(.N(16)) B2( .in0(W1), .in1(data), .sel(hex_dec), .out(W2));
+mux4 B3( .in0(W2[3:0]), .in1(W2[7:4]), .in2(W2[11:8]), .in3(W2[15:12]), .sel(digit_sel), .out(W3));
+sseg_decoder B5( .num(W3), .sseg(W4));
+mux2 #(.N(7)) B6( .in0(W4), .in1(7'b0111111), .out(seg) , .sel(W6));
+and G2( W6, sign, ~W5[3]);
+annode_decoder B7( .in(digit_sel), .out(W5));
 assign dp = 1;
-assign an[1] = ~sw[15];
-assign an[0] = sw[15];
+assign an = W5;
 endmodule
 
 
+\end{lstlisting}
+
+
+
+\begin{lstlisting}[style=Verilog,caption=Sseg4 Manual Source File,label=code:ex ]
+// Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
+
+module sseg4_manual(
+input [15:0] sw,
+output [6:0] seg,
+output dp,
+output [3:0] an
+);
+sseg4 Sseg4(
+.digit_sel(sw[13:12]), .sign(sw[14]), .hex_dec(sw[15]),
+.data({4'b0000, sw[11:0]}), .seg(seg), .dp(dp), .an(an)
+);
+endmodule
+
 
 \end{lstlisting}
+
 
 
 
