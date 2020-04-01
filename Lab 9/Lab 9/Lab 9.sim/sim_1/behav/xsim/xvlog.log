@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 9/Lab 9/Lab 9.srcs/sim_1/new/register_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_test
+ERROR: [VRFC 10-1412] syntax error near endmodule [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 9/Lab 9/Lab 9.srcs/sim_1/new/register_test.sv:35]
+ERROR: [VRFC 10-2790] SystemVerilog keyword endmodule used in incorrect context [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 9/Lab 9/Lab 9.srcs/sim_1/new/register_test.sv:35]
