@@ -60,7 +60,7 @@
 %=========== Body  ====================================
 \begin{document}
 
-\title{ELC 2137 Lab 8: Four Digit Display}
+\title{ELC 2137 Lab 9: Four Digit Display}
 \author{CJ Jones, Jake Simmons}
 
 \maketitle
@@ -87,63 +87,40 @@ This lab exlpored using a Basys3 board to produce a 4-digit display with the abi
 
 
 
-\begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrr}
-		Time (ns): & 0 & 10 & 20 & 30 \\
-		\midrule 
-		in 0 & 0001 & 0002 & 0004 & 0006 \\
-		in 1 & 0000 & 0003 & 0005 & 0007 \\
-		sel & 0 & 0 & 1 & 1 \\
+\begin{table*}[ht]\centering
+	\caption{\textit{register} expected results table}
+	\label{ALU:tbl:register_ERT}\medskip
+	\begin{tabular}{l|rrrrrrrrrrr}
+		Time (ns): & 0-5 & 5-10 & 10-15 & 15-20 & 20-25 & 25-30 & 30-35 & 35-40
+		& 40-45 & 45-50 & 50-55 \\
+		\midrule
+		D (hex) & 0 & 0     & A & A & 3         & 3       & 0           & 0 & 
+		0$\to$6 & 6 & 6 \\
+		clk     & 0 & 1     & 0 & 1 & 0         & 1       & 0           & 1 & 0 
+		& 1 & 0 \\
+		en    & 0 & 0       & 1 & 1 & 1$\to$0 & 0$\to$1 & 1$\to$0 & 0 & 0$\to$1
+		& 1 & 1 \\
+		rst   & 0 & 0$\to$1 & 0 & 0 & 0          & 0     & 0       & 0 & 0
+		& 0 & 0 \\
+		\midrule
+		Q (hex) & X & X$\to$0 & ?... &  &  &  & & & & & \\
 		\bottomrule
-		out & 0001 & 0002 &0005 &0007
-	\end{tabular}\medskip
-	
-	\includegraphics[width=1.0\textwidth]{Mux2_Test}
-	\caption{Mux2 simulation waveform and ERT}
-	\label{fig:sim_with_table}
-\end{figure}
-
-\begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrr}
-		Time (ns): & 0 & 10 & 20 & 30  \\
-		\midrule 
-		In0 & 0 & 4 & 8 & c \\
-		In1 & 1 & 5 & 9 & d  \\
-		In2 & 2 & 6 & a & e  \\
-		In3 & 3 & 7 & b & f  \\
-		sel & 0 & 1 & z & 3  \\
+	\end{tabular}
+\end{table*}
+\begin{table*}[ht]\centering
+	\caption{\textit{alu} expected results table skeleton}
+	\label{ALU:tbl:alu_ERT}\medskip
+	\begin{tabular}{l|rrrrrr}
+		Time (ns): & 0-10 & 10-20 & 20-30 & 30-40 & 40-50 & 50-60 \\
+		\midrule
+		in0 &  &  &  &  &  &  \\
+		in1 &  &  &  &  &  &  \\
+		op    &  &  &  &  &  &  \\
+		\midrule
+		out &  &  &  &  &  &  \\
 		\bottomrule
-		Out & 0 & 5 & a & f  \\
-	\end{tabular}\medskip
-	
-	\includegraphics[width=1.0\textwidth]{Mux4_Test}
-	\caption{Mux4 simulation waveform and ERT}
-	\label{fig:sim_with_table}
-\end{figure}
-
-\begin{figure}[ht]\centering
-	\begin{tabular}{l|rrrr}
-		Time (ns): & 0 & 10 & 20 & 30 \\
-		\midrule 
-		In & 0 & 1 & 2 & 3  \\
-		\bottomrule
-		Out & e & d & b & 7 \\
-	\end{tabular}\medskip
-	
-	\includegraphics[width=1.0\textwidth]{annode_decoder_test}
-	\caption{Annode decoder simulation waveform and ERT}
-	\label{fig:sim_with_table}
-\end{figure}
-
-\begin{figure}[ht]\centering
-	
-	\includegraphics[width=1.0\textwidth]{TCL_Console}
-	\caption{TCL Console output }
-	\label{fig:sim_with_table}
-\end{figure}
-
-
-\clearpage
+	\end{tabular}
+\end{table*}
 
 
 \section*{Code}
