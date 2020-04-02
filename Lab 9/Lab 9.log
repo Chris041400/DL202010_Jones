@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  1 APR 2020 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  1 APR 2020 22:16
 entering extended mode
 **"./Lab 9.tex"
 ("Lab 9.tex"
@@ -479,11 +479,11 @@ Package pdftex.def Info: ALU Module.jpg  used on input line 125.
  [2
 
  <./ALU Module.jpg>]
-<Top Module.jpg, id=21, 502.12593pt x 194.22563pt>
+<Top Module.jpg, id=21, 504.38437pt x 264.99pt>
 File: Top Module.jpg Graphic file (type jpg)
 <use Top Module.jpg>
 Package pdftex.def Info: Top Module.jpg  used on input line 133.
-(pdftex.def)             Requested size: 469.75502pt x 181.71265pt.
+(pdftex.def)             Requested size: 469.75502pt x 246.798pt.
 
 ("C:\Users\Owner\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listings\lstlang1.
 sty"
@@ -520,7 +520,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  8786 strings out of 492484
  128152 string characters out of 3121601
- 534868 words of memory out of 3000000
+ 534865 words of memory out of 3000000
  12867 multiletter control sequences out of 15000+200000
  8364 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -532,7 +532,7 @@ nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Owner/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Owner/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Owner
 /AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Lab 9.pdf" (6 pages, 233409 bytes).
+Output written on "Lab 9.pdf" (6 pages, 244704 bytes).
 PDF statistics:
  222 PDF objects out of 1000 (max. 8388607)
  143 named destinations out of 1000 (max. 500000)
