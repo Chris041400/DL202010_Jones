@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  1 APR 2020 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.1.22)  1 APR 2020 22:07
 entering extended mode
 **"./Lab 9.tex"
 ("Lab 9.tex"
@@ -332,6 +332,9 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 LaTeX Warning: Label `fig:sim_with_table' multiply defined.
 
 
+LaTeX Warning: Label `fig:sim_with_table' multiply defined.
+
+
 LaTeX Warning: Label `code:ex' multiply defined.
 
 
@@ -517,7 +520,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  8786 strings out of 492484
  128152 string characters out of 3121601
- 534889 words of memory out of 3000000
+ 534868 words of memory out of 3000000
  12867 multiletter control sequences out of 15000+200000
  8364 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -529,7 +532,7 @@ nts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Owner/AppData/Local/Programs/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Owner/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Owner
 /AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "Lab 9.pdf" (6 pages, 235841 bytes).
+Output written on "Lab 9.pdf" (6 pages, 236198 bytes).
 PDF statistics:
  222 PDF objects out of 1000 (max. 8388607)
  143 named destinations out of 1000 (max. 500000)
