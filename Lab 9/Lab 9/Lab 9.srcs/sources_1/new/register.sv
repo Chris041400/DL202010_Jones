@@ -1,16 +1,16 @@
-`module register #(parameter N=1) 
+module register #(parameter N=1) 
     (
     input clk, rst, en, 
     input [N-1:0] D, 
     output reg [N-1:0] Q
     );
     
-    always @(posedge clk, posedge rst
+    always @( posedge clk , posedge rst )
     begin
         if (rst ==1)
-            Q <= /*???*/ ; 
+            Q <= en ; 
         else if (en==1) 
-            Q <= /*???*/ ;
+            Q <= D ;
 end
 // Notes:  
 // - Reset is asynchronous , so this 

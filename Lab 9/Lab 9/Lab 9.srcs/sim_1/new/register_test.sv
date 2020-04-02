@@ -28,8 +28,3 @@ module register_test();
     $finish;
   end
 endmodule
-    
-
-
-    
-endmodule

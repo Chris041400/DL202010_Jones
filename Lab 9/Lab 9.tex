@@ -85,11 +85,7 @@ This lab exlpored using a Basys3 board to produce a 4-digit display with the abi
 \section*{Results}
 
 
-
-
-\begin{table*}[ht]\centering
-	\caption{\textit{register} expected results table}
-	\label{ALU:tbl:register_ERT}\medskip
+\begin{figure}[ht]\centering
 	\begin{tabular}{l|rrrrrrrrrrr}
 		Time (ns): & 0-5 & 5-10 & 10-15 & 15-20 & 20-25 & 25-30 & 30-35 & 35-40
 		& 40-45 & 45-50 & 50-55 \\
@@ -103,10 +99,17 @@ This lab exlpored using a Basys3 board to produce a 4-digit display with the abi
 		rst   & 0 & 0$\to$1 & 0 & 0 & 0          & 0     & 0       & 0 & 0
 		& 0 & 0 \\
 		\midrule
-		Q (hex) & X & X$\to$0 & ?... &  &  &  & & & & & \\
+		Q (hex) & X & X$\to$0 & 0 & a  & a & a & a & a & a & 6 & 6 \\
 		\bottomrule
 	\end{tabular}
-\end{table*}
+	
+	\includegraphics[width=1.0\textwidth]{Register Module}
+	\caption{register expected results table and simulation}
+	\label{fig:sim_with_table}=
+\end{figure}
+\clearpage
+
+
 \begin{table*}[ht]\centering
 	\caption{\textit{alu} expected results table skeleton}
 	\label{ALU:tbl:alu_ERT}\medskip
@@ -125,23 +128,33 @@ This lab exlpored using a Basys3 board to produce a 4-digit display with the abi
 
 \section*{Code}
 
-\begin{lstlisting}[style=Verilog,caption=Mux 2 Source File ,label=code:ex ]
+\begin{lstlisting}[style=Verilog,caption=Register Source File ,label=code:ex ]
 
-// Jake Simmons and Chris Jones , ELC 2137, 2020 -3-24
+// Chris Jones , ELC 2137, 2020 -3-24
 
-module mux2 #(parameter N=2)(
-input [N-1:0] in0, in1,
-input sel,
-output reg [15:0] out
+module register #(parameter N=1) 
+(
+input clk, rst, en, 
+input [N-1:0] D, 
+output reg [N-1:0] Q
 );
 
-always @*
-case(sel)
-0: out = in0 ;
-default: out = in1 ;
-endcase
+always @( posedge clk , posedge rst )
+begin
+if (rst ==1)
+Q <= en ; 
+else if (en==1) 
+Q <= D ;
+end
+// Notes:  
+// - Reset is asynchronous , so this 
+// block needs to execute when rst 
+// goes high. 
+// - We want enable to be synchronous 
+// (i.e. only happens on rising 
+// edge of clk), so it is left out 
+// of "sensitivity" list.
 endmodule
-
 
 
 \end{lstlisting}
