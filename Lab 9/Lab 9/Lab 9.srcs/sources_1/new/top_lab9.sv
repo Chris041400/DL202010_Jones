@@ -1,10 +1,11 @@
 module top_lab9(
-    input [11:0] sw,
     input clk, btnC, btnD, btnU,
+    input [11:0] sw,
     output reg[15:0] led
     );
-    wire [7:0] R1;
     wire [7:0] A1;
+    wire [7:0] R1;
+    
     
     register #(. N (8) ) r1 (. D(sw[7:0]),. clk(clk) ,. en(btnD),.rst(btnC),.Q(R1));
     
