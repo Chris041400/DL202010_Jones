@@ -140,7 +140,7 @@ This lab explores the skill of creating an Arithmetic Logic Unit , or ALU, using
 
 \begin{lstlisting}[style=Verilog,caption=Register Source File ,label=code:ex ]
 
-// Chris Jones , ELC 2137, 2020 -3-24
+// Chris Jones , ELC 2137, 2020 -3-30-20
 
 module register #(parameter N=1) 
 (
@@ -171,7 +171,7 @@ endmodule
 
 \begin{lstlisting}[style=Verilog,caption=Register Test Bench Code ,label=code:ex ]
 
-// Chris Jones , ELC 2137, 2020 -3-24
+// Chris Jones , ELC 2137, 2020 -3-30-20
 
 module register_test();
 
@@ -213,7 +213,7 @@ endmodule
 
 \begin{lstlisting}[style=Verilog,caption= Alu Source File,label=code:ex ]
 
-// Chris Jones , ELC 2137, 2020 -3-24
+// Chris Jones , ELC 2137, 2020 -3-30-20
 
 module alu #(parameter N=8) 
 (
@@ -248,7 +248,7 @@ endmodule
 
 
 \begin{lstlisting}[style=Verilog,caption= Alu Test Bench ,label=code:ex ]
-// Chris Jones , ELC 2137, 2020 -3-24
+// Chris Jones , ELC 2137, 2020 -3-30-20
 
 module ALU_test();
 reg[7:0] in0;
@@ -274,15 +274,16 @@ endmodule
 
 
 \begin{lstlisting}[style=Verilog,caption=Top Level Source File,label=code:ex ]
-//Chris Jones , ELC 2137, 2020 -3-24
+//Chris Jones , ELC 2137, 2020 -3-30-20
 
 module top_lab9(
-input [11:0] sw,
 input clk, btnC, btnD, btnU,
+input [11:0] sw,
 output reg[15:0] led
 );
-wire [7:0] R1;
 wire [7:0] A1;
+wire [7:0] R1;
+
 
 register #(. N (8) ) r1 (. D(sw[7:0]),. clk(clk) ,. en(btnD),.rst(btnC),.Q(R1));
 
