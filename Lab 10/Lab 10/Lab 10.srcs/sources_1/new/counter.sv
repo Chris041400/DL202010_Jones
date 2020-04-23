@@ -1,4 +1,3 @@
-
 module counter #(parameter N=1) 
 (
  input clk, rst, en,
@@ -12,13 +11,14 @@ module counter #(parameter N=1)
  begin
  if (rst)
   Q_reg <= 0;
- else Q_reg <= Q_next;
+ else 
+    Q_reg <= Q_next;
  end
 // next -state logic
  always @*
  begin
  if (en)
-  Q_next = Q_reg + 1'b1;
+  Q_next = Q_reg + 1;
  else
   Q_next = Q_reg; // no change 
  end
