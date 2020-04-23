@@ -1,13 +1,9 @@
 Vivado Simulator 2018.3
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 9e7f168ac55c4b2bbe13bd37ec4c50bd --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sseg_TDM_test_behav xil_defaultlib.sseg_TDM_test xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto bc76821fbd234caba3e453ef5ff6394d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot sseg_TDM_test_behav xil_defaultlib.sseg_TDM_test xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-ERROR: [VRFC 10-3180] cannot find port 'clok' on this module [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 10/Lab 10/Lab 10.srcs/sim_2/new/sseg4_TDM_test.sv:12]
+ERROR: [VRFC 10-3180] cannot find port 'clok' on this module [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 10/Lab 10/Lab 10.srcs/sim_2/new/sseg4_TDM_test.v:12]
 ERROR: [VRFC 10-3180] cannot find port 'on' on this module [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg4_TDM.sv:20]
-ERROR: [VRFC 10-2063] Module <BCD11> not found while processing module instance <e0> [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg4_TDM.sv:21]
-ERROR: [VRFC 10-2063] Module <mux2> not found while processing module instance <mux2A> [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg4_TDM.sv:22]
-ERROR: [VRFC 10-2063] Module <mux4> not found while processing module instance <mux4A> [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg4_TDM.sv:23]
-ERROR: [VRFC 10-2063] Module <sseg_decoder> not found while processing module instance <s1> [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg4_TDM.sv:24]
-ERROR: [VRFC 10-2063] Module <an_decoder> not found while processing module instance <an1> [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg4_TDM.sv:25]
+ERROR: [VRFC 10-3180] cannot find port 'out' on this module [C:/Users/Owner/Documents/GitHub/DL202010_Jones/Lab 10/Lab 10/Lab 10.srcs/sources_1/new/sseg4_TDM.sv:21]
 ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

@@ -1,7 +1,7 @@
 module counter_test();
 
     reg clk, en, rst;
-    wire [1:0} count;
+    wire [1:0] count;
     wire tick;
     
     counter #(.N(2)) a(.clk(clk), .en(en), .rst(rst),
@@ -9,7 +9,7 @@ module counter_test();
             
     always begin 
         clk = ~clk;
-        #5
+        #5;
     end
     
     initial begin 
@@ -46,5 +46,3 @@ module counter_test();
     $finish;
     end
     endmodule
-    
-

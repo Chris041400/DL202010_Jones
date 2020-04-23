@@ -18,7 +18,7 @@ module sseg4_TDM(
     
     counter #(.N(18)) c1(.clk(clock), .rst(reset), .en(1), .tick(tickout));
     counter #(.N(18)) c2(.clk(clock), .on(tickout), .count(digit_sel), .rst(reset));
-    BCD11 e0(.in(data[10:0]), .out(ebout));
+    BCD11_2 e0(.in(data[10:0]), .out(ebout));
     mux2 #(.N(16)) mux2A(.in0(data), .in1(ebout), .sel(hex_dec), .out(mux2out));
     mux4 #(.N(4)) mux4A(.in0(mux2out[3:0]), .in1(mux2out[7:4]), .in2(mux2out[11:8]), .in3(mux2out[15:12]), .sel(digit_sel), .out(mux4out));
     sseg_decoder s1(.num(mux4out), .sseg(decout));
